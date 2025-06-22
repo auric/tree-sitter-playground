@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  
+
 <head>
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta charset="UTF-8">
@@ -48,7 +48,7 @@ h1 {
   margin-top: 20px;
   text-align: center;
 }
-  
+
 ::-webkit-scrollbar {
   width: .5em;
   height: .5em;
@@ -377,7 +377,7 @@ body {
   /* Height/border radius should be equal */
   height: 30px;
   border-radius: 30px;
-  
+
   width: 50px;
   background: #ccc;
 }
@@ -514,6 +514,7 @@ body {
 <h4>Code</h4>
 <select id="language-select">
   <option value="solidity" selected="selected">solidity</option>
+  <option value="css">css</option>
 </select>
 
 <input id="logging-checkbox" type="checkbox"></input>
@@ -544,10 +545,9 @@ body {
 
 <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.13/lib/codemirror.min.js"></script>
 
-<script>LANGUAGE_BASE_URL = "assets/tree-sitter-solidity-1.0.6";</script>
 <script src="assets/web-tree-sitter-0.19.3/tree-sitter.js"></script>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/clusterize.js@1.0.0/clusterize.min.css">
+<script src="https://cdn.jsdelivr.net/npm/clusterize.js@1.0.0/clusterize.min.js"></script>
 <script src="assets/tree-sitter-playground-0.19.3/playground.js"></script>
 
 <script>
@@ -565,29 +565,7 @@ body {
       clearInterval(handle);
     }
   }, 500);
-})(`
-// pragma
-pragma solidity >=0.4.25 <0.7;
-
-// import
-import "SomeFile";
-import "SomeFile" as b;
-import * from "SomeFile";
-import * as c from "SomeFile";
-import a as a from "SomeFile";
-import {a} from "someFile";
-import {a as b} from "Somefile";
-import {a, c as b} from "someFile";
-
-contract Metacoin {
-    
-}
-
-enum example {
-    optioN,
-    option2,
-}
-`, ``);
+})(``, ``);
 </script>
 
     </main>
