@@ -82,7 +82,7 @@ let tree;
   async function handleLanguageChange() {
     const newLanguageName = languageSelect.value;
     if (!languagesByName[newLanguageName]) {
-      const url = `assets/tree-sitter-${newLanguageName}/tree-sitter-${newLanguageName}.wasm`;
+      const url = `assets/grammars/tree-sitter-${newLanguageName}.wasm`;
       languageSelect.disabled = true;
       try {
         languagesByName[newLanguageName] = await TreeSitter.Language.load(url);

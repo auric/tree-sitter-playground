@@ -1,12 +1,12 @@
 # Tree Sitter Playground
 
-[https://sambacha.github.io/tree-sitter-playground/](https://sambacha.github.io/tree-sitter-playground/)
+[https://auric.github.io/tree-sitter-playground/](https://auric.github.io/tree-sitter-playground/)
 
 ## Overview
 
 Application Logic for syntax highlighting and tree query.
 
-    Iterates over the abstract syntax tree, rendering it incrementally.  
+    Iterates over the abstract syntax tree, rendering it incrementally.
 
 Parameters:
 
@@ -21,7 +21,7 @@ Functionality:
   - If so, deletes the cursor and stops rendering
   - This allows the render to restart cleanly when the parse changes
 
-## Playground.js 
+## Playground.js
 
 1. `runTreeQuery` is a function that takes two arguments, `startRow` and `endRow`. These arguments represent the range of rows that are visible in the editor.
 2. If `endRow` is not given as an argument, then it is set to `null` using the default parameter value `endRow = null`.
@@ -32,10 +32,10 @@ Functionality:
 7. If there is a tree and a query, then the `captures` method is called on the query object. This method takes the root node of the tree, the start position (row and column) and the end position (row and column) as arguments. It returns an array of captures that are found in the given range, each of which has a name and a node.
 8. The `markText` method is called on the editor to mark the text between the start and end positions. The `css` option is used to set the mark's style.
 
-
 ## License
 
 The MIT License (MIT)
 
 Copyright (c) 2018-2023 Max Brunsfeld
 Copyright (c) 2023 Sam Bacha
+Copyright (c) 2025 Ihor Lifanov (Auric)
